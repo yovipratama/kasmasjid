@@ -1,0 +1,6 @@
+[22-Apr-2019 13:55:59 UTC] PHP Fatal error:  Out of memory (allocated 2621440) (tried to allocate 80 bytes) in /home/masb2883/public_html/kas/vendor/unisharp/laravel-filemanager/src/LaravelFilemanagerServiceProvider.php on line 21
+[22-Apr-2019 13:56:38 UTC] PHP Fatal error:  Out of memory (allocated 1835008) (tried to allocate 248 bytes) in /home/masb2883/public_html/kas/vendor/composer/ClassLoader.php on line 444
+[04-Jun-2019 17:15:24 UTC] PHP Fatal error:  Out of memory (allocated 4456448) (tried to allocate 32 bytes) in /home/masb2883/public_html/kas/vendor/laravel/framework/src/Illuminate/Support/Arr.php on line 233
+[04-Jun-2019 17:15:24 UTC] PHP Fatal error:  Out of memory (allocated 6029312) (tried to allocate 96 bytes) in /home/masb2883/public_html/kas/vendor/laravel/framework/src/Illuminate/Routing/Router.php on line 459
+[04-Jun-2019 17:18:46 UTC] PHP Fatal error:  Out of memory (allocated 12058624) (tried to allocate 65552 bytes) in /home/masb2883/public_html/kas/vendor/laravel/framework/src/Illuminate/Routing/RouteUrlGenerator.php on line 96
+[14-Jun-2019 18:01:47 Asia/Jakarta] PHP Fatal error:  Out of memory (allocated 1048576) (tried to allocate 256 bytes) in /home/masb2883/public_html/kas/vendor/laravel/framework/src/Illuminate/Foundation/Application.php on line 24
