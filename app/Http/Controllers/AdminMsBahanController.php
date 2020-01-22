@@ -36,8 +36,8 @@
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Nama','name'=>'nama','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','datatable'=>'satuan,nama'];
-			$this->form[] = ['label'=>'Satuan','name'=>'id_satuan','type'=>'select','validation'=>'required|integer|min:0','width'=>'col-sm-10','placeholder'=>'You can only enter the letter only'];
+			$this->form[] = ['label'=>'Nama','name'=>'nama','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Satuan','name'=>'id_satuan','type'=>'select','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'satuan,nama','placeholder'=>'You can only enter the letter only'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
