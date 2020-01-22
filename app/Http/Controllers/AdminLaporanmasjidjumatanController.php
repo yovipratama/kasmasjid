@@ -261,14 +261,14 @@ from ms_masuk_yatim m");
     ELSE date(m.waktu + INTERVAL (3+7-weekday(m.waktu)) DAY)
    END) as week_days
 from ms_keluar_yatim m");
-			$data['bm'] = DB::select("select sum(mb.jumlah) jumlah,(select nama from bahan where id = mb.id_bahan) bahan,(select s.nama from satuan s join bahan b on b.id_satuan = s.id where b.id = mb.id_bahan) satuan,
+			$data['bm'] = DB::select("select mb.jumlah jumlah,(select nama from bahan where id = mb.id_bahan) bahan,(select s.nama from satuan s join bahan b on b.id_satuan = s.id where b.id = mb.id_bahan) satuan,
 (CASE WHEN (weekday(waktu)<=3) THEN date(waktu + INTERVAL (3-weekday(waktu)) DAY)
     ELSE date(waktu + INTERVAL (3+7-weekday(waktu)) DAY)
-   END) as week_days from ms_masuk_bahan mb group by week_days,mb.id_bahan");
-			$data['bk'] = DB::select("select sum(kb.jumlah) jumlah,(select nama from bahan where id = kb.id_bahan) bahan,(select s.nama from satuan s join bahan b on b.id_satuan = s.id where b.id = kb.id_bahan) satuan,
+   END) as week_days from ms_masuk_bahan mb");
+			$data['bk'] = DB::select("select kb.jumlah jumlah,(select nama from bahan where id = kb.id_bahan) bahan,(select s.nama from satuan s join bahan b on b.id_satuan = s.id where b.id = kb.id_bahan) satuan,
 (CASE WHEN (weekday(waktu)<=3) THEN date(waktu + INTERVAL (3-weekday(waktu)) DAY)
     ELSE date(waktu + INTERVAL (3+7-weekday(waktu)) DAY)
-   END) as week_days from ms_keluar_bahan kb group by week_days,kb.id_bahan");
+   END) as week_days from ms_keluar_bahan kb");
 			$data['waktu'] = DB::select("select (CASE WHEN (weekday(waktu)<=3) THEN date(waktu + INTERVAL (3-weekday(waktu)) DAY)
     ELSE date(waktu + INTERVAL (3+7-weekday(waktu)) DAY)
    END) as week_days from ms_masuk_dana union select (CASE WHEN (weekday(waktu)<=3) THEN date(waktu + INTERVAL (3-weekday(waktu)) DAY)
@@ -324,14 +324,14 @@ from ms_masuk_yatim m");
     ELSE date(m.waktu + INTERVAL (3+7-weekday(m.waktu)) DAY)
    END) as week_days
 from ms_keluar_yatim m");
-			$data['bm'] = DB::select("select sum(mb.jumlah) jumlah,(select nama from bahan where id = mb.id_bahan) bahan,(select s.nama from satuan s join bahan b on b.id_satuan = s.id where b.id = mb.id_bahan) satuan,
+			$data['bm'] = DB::select("select mb.jumlah jumlah,(select nama from bahan where id = mb.id_bahan) bahan,(select s.nama from satuan s join bahan b on b.id_satuan = s.id where b.id = mb.id_bahan) satuan,
 (CASE WHEN (weekday(waktu)<=3) THEN date(waktu + INTERVAL (3-weekday(waktu)) DAY)
     ELSE date(waktu + INTERVAL (3+7-weekday(waktu)) DAY)
-   END) as week_days from ms_masuk_bahan mb group by week_days,mb.id_bahan");
-			$data['bk'] = DB::select("select sum(kb.jumlah) jumlah,(select nama from bahan where id = kb.id_bahan) bahan,(select s.nama from satuan s join bahan b on b.id_satuan = s.id where b.id = kb.id_bahan) satuan,
+   END) as week_days from ms_masuk_bahan mb");
+			$data['bk'] = DB::select("select kb.jumlah jumlah,(select nama from bahan where id = kb.id_bahan) bahan,(select s.nama from satuan s join bahan b on b.id_satuan = s.id where b.id = kb.id_bahan) satuan,
 (CASE WHEN (weekday(waktu)<=3) THEN date(waktu + INTERVAL (3-weekday(waktu)) DAY)
     ELSE date(waktu + INTERVAL (3+7-weekday(waktu)) DAY)
-   END) as week_days from ms_keluar_bahan kb group by week_days,kb.id_bahan");
+   END) as week_days from ms_keluar_bahan kb");
 			$data['waktu'] = DB::select("select (CASE WHEN (weekday(waktu)<=3) THEN date(waktu + INTERVAL (3-weekday(waktu)) DAY)
     ELSE date(waktu + INTERVAL (3+7-weekday(waktu)) DAY)
    END) as week_days from ms_masuk_dana union select (CASE WHEN (weekday(waktu)<=3) THEN date(waktu + INTERVAL (3-weekday(waktu)) DAY)
