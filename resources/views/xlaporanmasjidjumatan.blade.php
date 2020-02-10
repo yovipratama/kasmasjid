@@ -218,6 +218,29 @@
 				</tr>
 			</tbody>  
 </table>
+<br>
+<table border='1' width='100%' cellpadding='3' cellspacing="0" style='border-collapse: collapse;font-size:12px'>
+	<thead>
+		<tr class="active">
+			<th colspan=3 style="text-align:center;font-size:15pt;font-weight:bold">Petugas Jumat</th>   
+		</tr>
+		<tr class="active">           
+			<th width="33%" style="text-align:center">Khatib</th>   
+			<th width="33%" style="text-align:center">Qori</th>   
+			<th width="auto" style="text-align:center">Bilal</th>
+		</tr>
+	</thead>
+	<tbody>
+	@foreach($jk as $item)
+		<tr class="active">
+			<td>{{ $item->khatib }}</td>
+			<td>{{ $item->qori }}</td>
+			<td>{{ $item->bilal }}</td>
+		</tr>
+	@endforeach
+	</tbody>
+</table>
+
 <script src="{{asset('vendor/crudbooster/assets/adminlte/plugins/jQuery/jQuery-2.1.4.min.js')}}"></script>
 <script>
 function showHide(x){

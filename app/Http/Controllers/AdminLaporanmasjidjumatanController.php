@@ -294,6 +294,8 @@ from ms_keluar_yatim m");
 			$paperorientation	= "landscape";
 
 			$data = [];
+
+			$data['jk'] = DB::select("select * from jadwal_khatib ORDER by abs(datediff(tanggal,now())) LIMIT 1");
 			$data['dm'] = DB::select("select SUM(m.jumlah) jumlah,(select nama from ms_kategori_dana where id = m.id_ms_kategori_dana) nama,
 (CASE WHEN (weekday(m.waktu)<=3) THEN date(m.waktu + INTERVAL (3-weekday(m.waktu)) DAY)
     ELSE date(m.waktu + INTERVAL (3+7-weekday(m.waktu)) DAY)
